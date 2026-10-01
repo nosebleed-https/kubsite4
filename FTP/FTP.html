@@ -1,0 +1,617 @@
+
+<header class="site-header">
+    <img src="images/shapka.jpg" alt="Кубанский государственный университет">
+</header>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание: список ссылок и форма</title>
+
+    <style>
+     body { 
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px;
+    line-height: 1.5;
+    .site-header {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.site-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+    background-image: url("images/logofon.jpg");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #222;
+}
+
+        main {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #0645ad;
+            text-decoration:none;
+        }
+
+        fieldset {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        input,
+        textarea,
+        button {
+            font: inherit;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 9px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        .note {
+            color: #666;
+            font-size: 0.92em;
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+
+<h2 id="top">Маркированный список гиперссылок</h2>
+
+<ul>
+
+    <!-- 1. Абсолютная гиперссылка -->
+    <li>
+        <a href="http://kubsu.ru/" target="_blank">
+            Главная страница kubsu.ru
+        </a>
+    </li>
+
+    <!-- 2. Абсолютная HTTPS-ссылка -->
+    <li>
+        <a href="https://kubsu.ru/" target="_blank">
+            Главная страница kubsu.ru в протоколе HTTPS
+        </a>
+    </li>
+
+    <!-- 3. Ссылка-изображение -->
+    <li>
+        <a href="https://kubsu.ru/lib/images/Group3288.png">
+
+            <img
+                src="https://kubsu.ru/sites/all/themes/kubsu/logo.png"
+                width="200"
+                alt="Логотип КубГУ">
+
+        </a>
+    </li>
+
+    <!-- 4. Сокращённая ссылка на внутреннюю страницу -->
+    <li>
+        <a href="https://clck.ru/3Vk5KB">
+            Сокращённая ссылка на внутреннюю страницу
+        </a>
+    </li>
+
+    <!-- 5. Сокращённая ссылка на главную страницу -->
+    <li>
+        <a href="https://clck.ru/3Vk5Sz">
+            Сокращённая ссылка на главную страницу
+        </a>
+    </li>
+
+    <!-- 6. Ссылка на фрагмент текущей страницы -->
+    <li>
+        <a href="https://www.kubsu.ru/ru/#contacts">
+            Ссылка на фрагмент текущей страницы
+        </a>
+    </li>
+
+    <!-- 7. Ссылка с тремя параметрами в URL -->
+    <li>
+        <a href="https://infoneeds.kubsu.ru/infoneeds/guests/courses.jsp?type=spb&cid=5346247&term=7">
+            Ссылка с тремя параметрами в URL
+        </a>
+    </li>
+
+    <!-- 8. Ссылка с параметром id -->
+    <li>
+        <a href="https://www.kubsu.ru/news?id=9876">
+            Ссылка с параметром id в URL
+        </a>
+    </li>
+
+    <!-- 9. Относительная ссылка на страницу в текущем каталоге -->
+    <li>
+        <a href="kubsu/kubsu.html">
+            Относительная ссылка на страницу в текущем каталоге
+        </a>
+    </li>
+
+    <!-- 10. Относительная ссылка на страницу в каталоге about -->
+    <li>
+        <a href="kubsu/about/about.html"> 
+            Относительная ссылка на страницу в каталоге about
+        </a>
+    </li>
+
+    <!-- 11. Относительная ссылка на уровень выше -->
+    <li>
+        <a href="pages/na1nizhe.html">
+            Страница для проверки ссылки на уровень выше
+        </a>
+    </li>
+
+    <!-- 12. Относительная ссылка на два уровня выше -->
+    <li>
+        <a href="pages/pages2/na2nizhe.html">
+            Страница для проверки ссылки на два уровня выше
+        </a>
+    </li>
+
+    <!-- 13. Контекстная ссылка в тексте абзаца -->
+    <li>
+
+        <p>
+            КубГУ был основан в 1920 году. Подробнее об этом можно прочитать в
+            <a href="https://kubsu.ru/ru/university/history-tradition?ysclid=mu5mk66yfh316209857">
+                статье
+            </a>
+            про основание университета
+        </p>
+
+    </li>
+
+    <!-- 14. Ссылка на фрагмент страницы стороннего сайта -->
+<li>
+    <a href="https://studentsport.ru/leagues/nsfl/teams/fk-kubgu-man/?ysclid=mu5mtqotmy254154673"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ссылка на фрагмент страницы ФК КубГУ
+    </a>
+</li>
+
+<!-- 15. Ссылки из областей картинки (HTML-тег map) -->
+<li>
+    <p>Карта ссылок КубГУ: прямоугольник — главная, круг — абитуриенты.</p>
+
+    <div style="position: relative; display: inline-block;">
+        <!-- Вся картинка — ссылка на главную -->
+        <a href="https://www.kubsu.ru/" target="_blank" rel="noopener noreferrer">
+            <img src="images/karta.jpg" width="480" height="320"
+                 alt="Карта ссылок КубГУ" style="display: block;">
+        </a>
+
+        <!-- Круг поверх картинки — ссылка для абитуриентов -->
+        <a href="https://kubsu.ru/ru/abiturient"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Страница для абитуриентов"
+           style="position: absolute;
+                  top: 0px;
+                  left: 80px;
+                  width: 320px;
+                  height: 320px;
+                  border-radius: 50%;
+                  background: transparent;
+                  z-index: 10;">
+        </a>
+    </div>
+</li>
+
+
+
+
+
+    <!-- 16. Ссылка с пустым href -->
+    <li>
+        <a href="#" title="Ссылка на главную КубГУ (заглушка)">Ссылка с пустым href</a>
+    </li>
+
+    <!-- 17. Ссылка без href -->
+    <style>
+    a.no-href {
+        color: #0645ad;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    a.no-href:hover {
+        color: #cc0000;
+    }
+</style>
+
+<a class="no-href">Ссылка без href</a>
+
+
+    <!-- 18. Ссылка, по которой запрещён переход поисковикам -->
+    <li>
+        <a
+            href="https://www.kubsu.ru/"
+            rel="nofollow"
+            target="_blank">
+
+            Ссылка с rel="nofollow"
+
+        </a>
+    </li>
+
+    <!-- 19. Запрещённая для индексации страница -->
+    <li>
+        <a
+            href="https://www.kubsu.ru/"
+            rel="nofollow">
+
+            Ссылка на страницу с запретом индексации
+
+        </a>
+    </li>
+
+    <!-- 20. Нумерованный список ссылок с title -->
+    <li>
+
+        <b>
+            Нумерованный список ссылок с подписями title:
+        </b>
+
+        <ol>
+
+            <li>
+                <a
+                    href="https://www.kubsu.ru/"
+                    title="Официальный сайт КубГУ"
+                    target="_blank">
+
+                    КубГУ
+
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://kubsu.ru/user"
+                    title="Для регистрации кликните по данной ссылке"
+                    target="_blank">
+
+                    MDN
+
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="#form"
+                    title="Перейти к форме">
+
+                    Форма
+
+                </a>
+            </li>
+
+        </ol>
+
+    </li>
+
+    <!-- 21. FTP-ссылка с авторизацией -->
+    <li>
+
+        <a href="ftp://students:password345@ftp.citeKUB/FTP/FTP.html">
+
+            Файл на FTP-сервере с авторизацией
+
+        </a>
+
+        <div class="note">
+
+        </div>
+
+    </li>
+
+</ul>
+ <!-- 5. Пол -->
+    <fieldset>
+
+        <legend>Пол</legend>
+
+        <label>
+            <input
+                type="radio"
+                name="gender"
+                value="male">
+
+            Мужской
+        </label>
+
+        
+
+        <label>
+            <input
+                type="radio"
+                name="gender"
+                value="female">
+
+            Женский
+        </label>
+
+    </fieldset>
+
+    <!-- 6. Любимый язык программирования -->
+    <fieldset>
+
+        <legend>
+            Любимый язык программирования
+        </legend>
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="Pascal">
+
+            Pascal
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="C">
+
+            C
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="C++">
+
+            C++
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="JavaScript">
+
+            JavaScript
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="PHP">
+
+            PHP
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="Python">
+
+            Python
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="Java">
+
+            Java
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="Haskel">
+
+            Haskel
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="Clojure">
+
+            Clojure
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="Prolog">
+
+            Prolog
+        </label>
+
+        
+
+        <label>
+            <input
+                type="checkbox"
+                name="language"
+                value="Scala">
+
+            Scala
+        </label>
+
+    </fieldset>
+
+    <!-- 7. Биография -->
+    <p>
+
+        <label>
+            Биография:
+
+            <textarea
+                name="bio"
+                rows="6"
+                placeholder="Расскажите о себе">
+            </textarea>
+
+        </label>
+
+    </p>
+
+    
+
+</body>
+</html> 
+</a>
+    </li>
+
+<!-- ================= ФОРМА ================= -->
+
+<h2 id="form">Форма</h2>
+
+<form action="saved.html" method="get">
+
+    <!-- 1. ФИО -->
+    <p>
+
+        <label>
+            ФИО:
+
+            <input
+                type="text"
+                name="fio"
+                placeholder="Иванов Иван Иванович"
+                required>
+
+        </label>
+
+    </p>
+
+    <!-- 2. Телефон -->
+    <p>
+
+        <label>
+            Телефон:
+
+            <input
+                type="tel"
+                name="tel"
+                placeholder="+7 900 000-00-00">
+
+        </label>
+
+    </p>
+
+    <!-- 3. E-mail -->
+    <p>
+
+        <label>
+            E-mail:
+
+            <input
+                type="email"
+                name="email"
+                placeholder="example@mail.ru"
+                required>
+
+        </label>
+
+    </p>
+
+    <!-- 4. Дата рождения -->
+    <p>
+
+        <label>
+            Дата рождения:
+
+            <input
+                type="date"
+                name="birthdate">
+                <!-- 8. С контрактом ознакомлен -->
+    <p>
+
+        <label>
+
+            <input
+                type="checkbox"
+                name="agreement"
+                required>
+
+            С сайтом ознакомлен(а)
+
+        </label>
+
+    </p>
+
+    <!-- 9. Кнопка Сохранить -->
+    <button type="submit">
+        Сохранить
+    </button>
+
+</form>
+
+<a href="#top">
+    ↑ В начало страницы
+</a>
+    </main>

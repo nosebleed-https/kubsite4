@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+
+    background-image: url("images/logofon.jpg");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Собственный контейнер сайта.
+   Не переопределяет Bootstrap .container. */
+
+.site-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Шапка */
+
+.site-header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid #ccc;
+}
+
+.header-inner {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+
+    object-fit: contain;
+}
+
+.site-header h1 {
+    margin: 0;
+
+    font-size: 24px;
+
+    text-align: center;
+}
+
+
+/* Навигация */
+
+.site-nav {
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-inner {
+    min-height: 55px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.site-nav a {
+    display: block;
+
+    width: 100%;
+
+    padding: 8px 12px;
+
+    color: #0645ad;
+
+    text-decoration: none;
+    text-align: center;
+
+    border-radius: 6px;
+}
+
+.site-nav a:hover {
+    background: #e8eef8;
+}
+
+
+/* Основное содержимое */
+
+main.container {
+    background: rgba(255, 255, 255, 0.88);
+}
+
+.content-section {
+    width: 100%;
+}
+
+.content-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.no-href {
+    color: #0645ad;
+    cursor: default;
+}
+
+
+/* Карта изображения */
+
+.image-map {
+    position: relative;
+
+    display: inline-block;
+
+    max-width: 100%;
+}
+
+.image-map img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
+.applicant-link {
+    position: absolute;
+
+    top: 0;
+    left: 16.7%;
+
+    width: 66.6%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: transparent;
+}
+
+
+/* Таблица */
+
+table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #b8cde6;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(25, 75, 130, 0.12);
+}
+
+caption {
+    margin-bottom: 12px;
+
+    font-weight: bold;
+    font-size: 18px;
+
+    color: #174a7c;
+}
+
+th,
+td {
+    padding: 9px 8px;
+
+    text-align: center;
+
+    border-right: 1px solid #c9d9ea;
+    border-bottom: 1px solid #c9d9ea;
+}
+
+th:last-child,
+td:last-child {
+    border-right: 0;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+th {
+    color: #fff;
+
+    background: #2f75b5;
+
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background: #f7fbff;
+}
+
+tbody tr:nth-child(even) {
+    background: #eaf3fb;
+}
+
+tbody tr:hover {
+    background: #d8eaf8;
+}
+
+
+/* Форма */
+
+form {
+    width: 100%;
+    max-width: 700px;
+}
+
+form p {
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 100%;
+
+    padding: 9px;
+
+    margin-top: 5px;
+
+    border: 1px solid #999;
+    border-radius: 4px;
+
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    margin: 20px 0;
+    padding: 15px;
+
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+fieldset label {
+    display: inline-block;
+
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 20px;
+
+    font: inherit;
+
+    cursor: pointer;
+
+    border: 1px solid #777;
+    border-radius: 5px;
+
+    background: #e8e8e8;
+}
+
+button:hover {
+    background: #d8d8d8;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 12px;
+
+    border: 1px solid #777;
+    border-radius: 6px;
+
+    background: #f1f1f1;
+}
+
+
+/* Подвал */
+
+.site-footer {
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-top: 1px solid #ccc;
+}
+
+.site-footer .site-container {
+    min-height: 80px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer p {
+    margin: 0;
+
+    text-align: center;
+}
+
+
+/* Bootstrap breakpoint md = 768px */
+
+@media (min-width: 768px) {
+
+    .header-inner {
+        flex-direction: row;
+
+        gap: 30px;
+    }
+
+    .site-header h1 {
+        font-size: 30px;
+    }
+
+    .nav-inner {
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .site-nav a {
+        width: auto;
+
+        padding: 10px 18px;
+    }
+
+    .applicant-link {
+        left: 80px;
+
+        width: 320px;
+        height: 320px;
+    }
+
+    th,
+    td {
+        padding: 10px 12px;
+    }
+}
